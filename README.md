@@ -1,4 +1,6 @@
-Project Used:
+Project: Cinesphere
+Movie/series information website
+
 
 
  #Logical Design
