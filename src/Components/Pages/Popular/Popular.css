@@ -1,0 +1,14 @@
+.card-show{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+
+
+.choice_in_popular{
+    margin: 5%;
+    display: flex;
+    gap: 10px;
+}

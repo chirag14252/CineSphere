@@ -1,27 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Nav from "./Components/navbar/Nav";
-import Home from './Components/movie/Home';
-import './App.css'
-
-
-
-function App() {
-  const [HeadingVar,changeHeading] = useState("Movies");
-  const [trendingData,changeTrendingData] = useState([]);
-  const changeTitle = (data)=>{
-   changeHeading(data);
-  }
-  const changeData = (data)=>{
-  changeTrendingData(data)
-  }
-  return (
-    <>
-    <Nav title = {changeTitle} show={changeData}/>
-    <Home title = {HeadingVar}  show = {trendingData}/>
-    </>
-  )
+import "./App.css"
+import {Routes, Route} from "react-router-dom"
+import FrontPage from "./Components/Front-page/FrontPage" 
+import Popular from "./Components/Pages/popular/Popular"
+const App = ()=>{
+    return(
+        <>
+          <Routes>
+            <Route path ="/" Component={FrontPage}/>
+            <Route path="/Popular" Component={Popular}/>
+          </Routes>
+        </>
+    )
 }
 
-export default App
+export default App;

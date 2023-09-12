@@ -1,0 +1,28 @@
+.card-popular{
+  background: #ffffff;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 315px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-img-popular img{
+    border-radius: 10px 10px 0px 0px ;
+    width: 100%;
+}
+.movie-title-popular{
+ text-align: left;
+ font-size: 0.8rem;
+ margin-left: 10px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 100;
+}
+
+.movie-year-popular{
+ text-align: left;
+ font-size: 0.7rem;
+ margin-left: 10px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 500;
+}
