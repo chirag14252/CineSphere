@@ -3,21 +3,34 @@ import Nav from "../../navbar/Nav"
 import InstanceAxios from "../../../axios";
 import "./Popular.css"
 import CardPopular from "./cardsPopular/CardPopular";
+import NextPrev from "./next/prev/NextPrev";
 
 
 const Popular = ()=>{
-    const [Popular,PopularChanges] = useState();
+    //for changing the page number:
+    const [num,numchange]= useState(1);
+    const changePageNum = (data)=>{
+     numchange(data);
+    }
+    
+
+    //for keeping the states of movie and series
+    const [trackvar,trackChanges] = useState(0);
+    const [Popular,PopularChanges] = useState(null);
     const popularFetch = ()=>{
-        InstanceAxios().get("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1").then(
+        InstanceAxios().get(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${num}`).then(
             (res)=>{
+                trackChanges(0) //state for button 
+
                 PopularChanges(res.data.results);
             }
         )
     }
-    const [PopularTV,PopularTVshow] = useState();
+    const [PopularTV,PopularTVshow] = useState(null);
     const popularTVfetch = ()=>{
-        InstanceAxios().get("").then(
+        InstanceAxios().get(`https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${num}`).then(
             (res)=>{
+                trackChanges(1);
                 PopularTVshow(res.data.results);
             }
         )
@@ -25,21 +38,29 @@ const Popular = ()=>{
     useEffect(
         ()=>{
             popularFetch();
-        },[]
+        },[num]
     )
+
+    
     return(
         <>
         <Nav/>
         <div className="choice_in_popular">
-            <button onclick={popularFetch}>Movies</button>
-            <button onclick={popularTVfetch}>TV</button>
+            <button onClick={popularFetch}>Movies</button>
+            <button onClick={popularTVfetch}>TV</button>
+            <NextPrev page = {changePageNum}/>
         </div>
+      
         <div className="card-show">
-          {
-          Popular?Popular.map((item)=>{
-           return <CardPopular key= {item.id} details = {item}/>
-          }):null
-          } 
+        {
+           trackvar? (PopularTV?PopularTV.map((item)=>{
+                return <CardPopular key = {item.id} details = {item}/>
+            }):null)
+            :
+            (Popular?Popular.map((item)=>{
+                return <CardPopular key = {item.id} details = {item}/>
+            }):null)
+        }
         </div>
         </>
     )
