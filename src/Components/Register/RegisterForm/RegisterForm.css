@@ -23,8 +23,11 @@ input, select {
   input[type=submit]:hover {
     background-color: #45a049;
   }
-  
+  label{
+    color: white; 
+    font-family: sans-serif;
+  }
   .registerForm-parent{
     border-radius: 5px;
-    padding: 20px;
+    padding: 20%;
   }

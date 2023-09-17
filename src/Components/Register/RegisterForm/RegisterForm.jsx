@@ -2,7 +2,7 @@ import "./RegisterForm.css"
 
 const RegisterForm = ()=>{
     return(
-   <>
+ 
    
    <div className="registerForm-parent">
     <form action="">
@@ -10,16 +10,18 @@ const RegisterForm = ()=>{
     <input type="text" id="fname" name="firstname" placeholder="Your name"/>
 
     <label for="email">E-Mail: </label>
-    <input type="email" id="email"name = "lastname" placeholder="E-mail"/>
+    <input type="email" id="email"name = "email" placeholder="E-mail"/>
 
     <label for="password">Password: </label>
-    <input type="password" id="lname" name="lastname" placeholder="Enter Password"/>
-    
-      <input type="submit" value="Register"/>
+    <input type="password" id="password" name="password" placeholder="Enter Password"/>
+
+    <label for="cnfPassword">Password: </label>
+    <input type="password" id="cnfPassword" name="cnfPassword" placeholder="Re-enter Password again"/>
+    <input type="submit" value="Register"/>
       </form>
   
    </div>
-   </>
+
     )
 }
 
