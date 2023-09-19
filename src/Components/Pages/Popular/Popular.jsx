@@ -32,6 +32,7 @@ const Popular = ()=>{
             (res)=>{
                 trackChanges(1);
                 PopularTVshow(res.data.results);
+                console.log(res);
             }
         )
     }

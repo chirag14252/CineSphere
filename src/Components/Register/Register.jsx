@@ -2,7 +2,7 @@
 import "./Register.css"
 import RegisterForm from "./RegisterForm/RegisterForm";
 import LoginPage from "./LoginPage/LoginPage";
-import Ani from "./animation/Ani.jsx"
+import Ani from "./Content/ContentHome.jsx"
 import { useState } from "react";
 const Register = () => {
     
