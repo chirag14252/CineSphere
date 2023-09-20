@@ -1,0 +1,21 @@
+.newsletter{
+    display: flex;
+    justify-content: center;
+}
+.right-section{
+    display: flex;
+    align-items: center;
+}
+.Footer-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2937;
+    padding: 0 12px;
+    height: 20rem;
+}
+
+.Footer-heading{
+    color:white;
+    font-family: 'Courier New';
+}

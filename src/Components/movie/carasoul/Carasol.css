@@ -1,0 +1,25 @@
+.slick-slide img {
+    height: 40rem;
+    width:100%;
+   border-radius: 10px;
+  
+}
+
+.imgslider{
+    padding: 3%;
+    padding-top: 0%;
+}
+
+.heading-slideshow{
+    display: inline;
+    position: relative;
+    top : 80px;
+    left:20px;
+    font-weight: 400;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color:white
+}
+
+
+/*  */

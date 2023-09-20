@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import InstanceAxios from "../../axios";
-import Card from "../cards/Card";
+import Card from "../cards/Card";;
+import Carasol from "./carasoul/Carasol";
 import "./Home.css"
 const Home = (props)=>{
   //fetching data of trending movies
@@ -27,6 +28,7 @@ const Home = (props)=>{
 
     return(
         <>
+          <Carasol/>
          <div className="heading-cards">Trending Movies</div>
          <div className="show-card">
          {

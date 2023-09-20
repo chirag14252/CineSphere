@@ -1,5 +1,5 @@
 import "./nav.css"
-import logo from "./images/logo.svg";
+import logo from "./images/logo.png"
 import homesvg from "./images/home.svg"
 import { useState } from "react";
 import InstanceAxios from "../../axios";
@@ -18,7 +18,7 @@ const Nav = () => {
         <>
             <div className="nav-bar">
                 <div className="left-box">
-                    <div className="nav-logo"><img src="https://img.icons8.com/ios-filled/50/documentary.png"></img></div>
+                    <div className="nav-logo"><img src={logo}></img></div>
                     <div className="nav-child">
                         <img src={homesvg} alt="" className="home-svg" />
                                <div className="heading" onClick={navigateHome}>Home</div>
