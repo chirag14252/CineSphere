@@ -3,6 +3,7 @@ import InstanceAxios from "../../axios";
 import Card from "../cards/Card";;
 import Carasol from "./carasoul/Carasol";
 import "./Home.css"
+import Footer from "../Footer/Footer";
 const Home = (props)=>{
   //fetching data of trending movies
   const [trendingMoviesVar,changeTrendingMovies] = useState([]);

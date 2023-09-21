@@ -41,7 +41,7 @@ const Carasol = () => {
                 {movies.map((item,idx) => (
                     <div key={item.id} >
                          <p className="heading-slideshow">#{idx+1}</p>
-                        <img src={`https://image.tmdb.org/t/p/original/${item.poster_path}`} alt={item.title} />
+                        <img src={`https://image.tmdb.org/t/p/original/${item.poster_path}`} alt={item.title}/>
                     </div>
                 ))}
             </Slider>

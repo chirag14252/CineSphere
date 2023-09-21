@@ -25,9 +25,10 @@ const Nav = () => {
                                <div className="heading" onClick = {navigateToPopular}>Popular</div>
                     </div>
                 </div>
-                
-                <div className="button-Schedule">Register</div>
-             
+                <div className="nav-right">
+                <button className="button-nav-right glow-on-hover">Your Favourites</button>
+                <button className="button-nav-right glow-on-hover">Log Out</button>
+                </div>
             </div>
 
 
