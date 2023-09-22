@@ -4,6 +4,7 @@ import Card from "../cards/Card";;
 import Carasol from "./carasoul/Carasol";
 import "./Home.css"
 import Footer from "../Footer/Footer";
+import More from "./More/More";
 const Home = (props)=>{
   //fetching data of trending movies
   const [trendingMoviesVar,changeTrendingMovies] = useState([]);
@@ -38,6 +39,8 @@ const Home = (props)=>{
          })
          }
          </div>
+         
+         <br />
          <div className="heading-cards">Trending TV Shows</div>
          <div className="show-card">
          {

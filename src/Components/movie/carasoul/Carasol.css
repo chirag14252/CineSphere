@@ -22,4 +22,15 @@
 }
 
 
-/*  */
+/* button of carsoul */
+.slick-next:before{
+    color:black;
+    font-size: 2rem;
+}
+
+.slick-prev:before{
+    color:black;
+    font-size: 2rem;
+    position: relative;
+    right:10px;
+}

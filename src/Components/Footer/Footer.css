@@ -105,9 +105,7 @@ left: 10px;
 animation: moving 2s linear infinite;
 }
 
-.col:nth-child(2) , :nth-child(3){
-    flex-basis: 15%;
-}
+
 @keyframes moving {
     0%{
         right:-20px;
