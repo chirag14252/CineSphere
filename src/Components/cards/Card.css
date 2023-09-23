@@ -26,3 +26,28 @@
  font-family: 'Montserrat', sans-serif;
  font-weight: 500;
 }
+
+.add_fav_button{
+  position: relative;
+  padding: 5px 10px;
+  top:14px;
+  border-radius: 8px;
+  border: #ffffff;
+}
+.add_fav_button:hover{
+  background-color: darkgoldenrod;
+}
+
+ .play_button{
+  display: none
+}
+.card :hover .play_button{
+  display: inline;
+  position: relative;
+  top:200px;
+  left:50px;
+}
+
+.card :hover .img-rendered{
+  opacity: 0.5;
+}
