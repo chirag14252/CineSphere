@@ -1,0 +1,21 @@
+.youtube-div{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap:10px;
+}
+
+.iframe_vid{
+    border: 10px;
+}
+
+.vid_heading{
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+.vid_top{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}

@@ -28,6 +28,8 @@ const Home = (props)=>{
    trendingTvShows();
   },[]);
 
+
+
     return(
         <>
           <Carasol/>
@@ -35,7 +37,7 @@ const Home = (props)=>{
          <div className="show-card">
          {
         trendingMoviesVar.map((item)=>{
-            return <Card key = {item.id} details = {item}/>
+            return <Card key = {item.id} details = {item} />
          })
          }
          </div>

@@ -50,4 +50,5 @@
 
 .card :hover .img-rendered{
   opacity: 0.5;
+  cursor: pointer;
 }
