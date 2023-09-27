@@ -28,7 +28,8 @@ const Home = (props)=>{
    trendingTvShows();
   },[]);
 
-
+// list of all the movies
+  const [FavList,changeFavList] = useState();
 
     return(
         <>
@@ -37,7 +38,7 @@ const Home = (props)=>{
          <div className="show-card">
          {
         trendingMoviesVar.map((item)=>{
-            return <Card key = {item.id} details = {item} />
+            return <Card key = {item.id} details = {item} fav={FavList}/>
          })
          }
          </div>

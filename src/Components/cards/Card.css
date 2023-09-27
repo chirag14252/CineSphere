@@ -28,24 +28,25 @@
 }
 
 .add_fav_button{
-  position: relative;
-  padding: 5px 10px;
-  top:14px;
-  border-radius: 8px;
+  width: 50%;
   border: #ffffff;
+  border-radius: 10px;
+  padding: 10px 2px;
+  margin : 0 25%;
 }
 .add_fav_button:hover{
-  background-color: darkgoldenrod;
+  background-color: yellow;
 }
 
  .play_button{
   display: none
 }
 .card :hover .play_button{
-  display: inline;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top:200px;
-  left:50px;
+  top: 150px; 
 }
 
 .card :hover .img-rendered{
