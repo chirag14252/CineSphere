@@ -1,13 +1,26 @@
 import "./Card.css"
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 const Card = (props) =>{
   const navigate = useNavigate();
   const handleClick = ()=>{
     navigate("/video",{state:{id:props.details.id,title:props.details.title}});
    }
-  const addFav = ()=>{
-    navigate("/favourite",{state:{list:props.details}})
+   const reqBody = {
+      movie_id: props.details.id,
+      movie_name:props.details.title?props.details.title:props.details.name,
+      movie_poster:props.details.backdrop_path
+   }
+   const sendFavorite = () =>{
+   axios.post("http://localhost:3000/fav",reqBody).then((res)=>{
+     toast(res.data.message);
+   })
   }
+
+  // toastify 
     return(
     <div className="card">
      <div className="movie-img" onClick={handleClick}>
@@ -19,7 +32,7 @@ const Card = (props) =>{
       <h2 className="movie-title">{props.details.title?props.details.title:props.details.name}</h2>
       <h2 className="movie-title"><i class="fa-solid fa-star" style={{color:"black"}}></i>{props.details.title?props.details.vote_average:props.details.vote_average}</h2>
       <div>
-      <button className="add_fav_button" onClick ={addFav}>Add to Wishlist+</button>
+      <button className="add_fav_button" onClick ={sendFavorite}>Add to Wishlist+</button>
       </div>
       </div>
     </div>

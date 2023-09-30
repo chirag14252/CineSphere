@@ -14,6 +14,10 @@ const Nav = () => {
     const navigateHome = ()=>{
         navigate("/");
     }
+
+    const navigateFavourite = ()=>{
+        navigate("/favourite")
+    }
     return (
         <>
             <div className="nav-bar">
@@ -26,8 +30,8 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className="nav-right">
-                <button className="button-nav-right glow-on-hover">Your Favourites</button>
-                <button className="button-nav-right glow-on-hover">Log Out</button>
+                <button className="button-nav-right glow-on-hover" onClick={navigateFavourite}>Your Favourites</button>
+                <button className="button-nav-right glow-on-hover" >Log Out</button>
                 </div>
             </div>
 

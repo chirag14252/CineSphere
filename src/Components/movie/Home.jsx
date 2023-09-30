@@ -3,8 +3,8 @@ import InstanceAxios from "../../axios";
 import Card from "../cards/Card";;
 import Carasol from "./carasoul/Carasol";
 import "./Home.css"
-import Footer from "../Footer/Footer";
-import More from "./More/More";
+import { ToastContainer } from "react-toastify";
+
 const Home = (props)=>{
   //fetching data of trending movies
   const [trendingMoviesVar,changeTrendingMovies] = useState([]);
@@ -27,10 +27,7 @@ const Home = (props)=>{
    trendingMovies();
    trendingTvShows();
   },[]);
-
-// list of all the movies
-  const [FavList,changeFavList] = useState();
-
+  
     return(
         <>
           <Carasol/>
@@ -38,7 +35,7 @@ const Home = (props)=>{
          <div className="show-card">
          {
         trendingMoviesVar.map((item)=>{
-            return <Card key = {item.id} details = {item} fav={FavList}/>
+            return <Card key = {item.id} details = {item} />
          })
          }
          </div>
@@ -48,10 +45,12 @@ const Home = (props)=>{
          <div className="show-card">
          {
          trendingTVshowsVar.map((item)=>{
+            console.log(item);
             return <Card key= {item.id} details = {item}/>
          })
          }
          </div>
+         <ToastContainer/>
         </>
     )
 }

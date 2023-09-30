@@ -1,0 +1,13 @@
+.fav_body{
+        display: flex;
+        gap:50px;
+        margin:10px;
+        flex-wrap: wrap;
+        align-items: center;
+}
+
+.head-fav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+}
